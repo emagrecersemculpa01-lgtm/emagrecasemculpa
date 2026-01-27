@@ -1,10 +1,10 @@
 import { Check } from "lucide-react";
 
 const differentials = [
-  "Não proíbe alimentos",
-  "Não ignora o ciclo feminino",
-  "Não exige rotina perfeita",
-  "Não usa culpa como motivação"
+  "Emagrecimento possível de manter — sem terrorismo nutricional",
+  "Respeita seu ciclo feminino e suas oscilações hormonais",
+  "Menos culpa e menos compulsão alimentar",
+  "Resultados que não somem na primeira escapada"
 ];
 
 export const DifferentialsSection = () => {

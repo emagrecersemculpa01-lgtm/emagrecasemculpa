@@ -4,27 +4,27 @@ const benefits = [
   {
     icon: FileText,
     title: "Guia completo em PDF",
-    description: "Método estruturado e fácil de seguir"
+    description: "Passo a passo estruturado e fácil de aplicar na sua vida real"
   },
   {
     icon: Utensils,
-    title: "Estratégias alimentares simples",
-    description: "Sem complicação, sem receitas mirabolantes"
+    title: "Estratégias simples para vida real",
+    description: "Alimentação prática, sem receitas mirabolantes ou ingredientes caros"
   },
   {
     icon: Calendar,
-    title: "Ajustes para ciclo hormonal",
-    description: "Cada fase do mês trabalhando a seu favor"
+    title: "Ajustes para o ciclo hormonal",
+    description: "Cada fase do mês trabalhando a seu favor, não contra você"
   },
   {
     icon: Dumbbell,
-    title: "Exercícios possíveis",
-    description: "Movimentos que cabem na sua vida real"
+    title: "Exercícios possíveis, sem punição",
+    description: "Movimentos que cabem na sua rotina, sem exigir 2h de academia"
   },
   {
     icon: Heart,
-    title: "Mentalidade sem culpa",
-    description: "Transforme sua relação com comida e corpo"
+    title: "Mentalidade para constância sem culpa",
+    description: "Transforme sua relação com comida e corpo de forma duradoura"
   }
 ];
 
