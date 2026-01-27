@@ -1,7 +1,7 @@
 import heroWoman from "@/assets/hero-woman.jpg";
 import ebookMockup from "@/assets/ebook-mockup.png";
 
-const CHECKOUT_URL = "#checkout-placeholder";
+const CHECKOUT_URL = "https://pay.cakto.com.br/hvacbfa_744151";
 
 export const HeroSection = () => {
   return (
