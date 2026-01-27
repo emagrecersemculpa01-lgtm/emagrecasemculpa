@@ -4,17 +4,17 @@ const problems = [
   {
     icon: Sparkles,
     title: "Hormônios",
-    description: "Seu corpo feminino tem necessidades únicas que dietas comuns ignoram."
+    description: "Seu corpo feminino tem necessidades únicas que dietas genéricas simplesmente ignoram. Não é falta de força de vontade."
   },
   {
     icon: Brain,
-    title: "Estresse",
-    description: "A rotina pesada sabota seus resultados sem você perceber."
+    title: "Estresse e Rotina",
+    description: "A vida corrida, o cansaço e a pressão do dia a dia sabotam seus resultados sem você perceber."
   },
   {
     icon: Moon,
-    title: "Ciclo",
-    description: "Cada fase do mês pede uma abordagem diferente."
+    title: "Ciclo Feminino",
+    description: "Cada fase do seu mês pede uma abordagem diferente. Dietas que ignoram isso estão fadadas ao fracasso."
   }
 ];
 
@@ -27,8 +27,11 @@ export const ProblemSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
           O problema <span className="gradient-text">nunca foi você</span>
         </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          A culpa não é sua. Métodos genéricos não consideram o que torna você, você.
+        <p className="text-muted-foreground text-center mb-6 max-w-2xl mx-auto">
+          A culpa não é sua. Você não fracassou — os métodos que você tentou é que não foram feitos para você.
+        </p>
+        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto text-sm">
+          Dietas genéricas ignoram seus hormônios, seu estresse e sua rotina real. Elas tratam você como se fosse uma máquina — e quando não funciona, a culpa cai em você. Isso acaba aqui.
         </p>
         
         <div className="grid md:grid-cols-3 gap-6">

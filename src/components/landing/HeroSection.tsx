@@ -21,14 +21,14 @@ export const HeroSection = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
-              Sem culpa. Sem extremos. Um método pensado para o corpo feminino.
+              Um método prático para emagrecer, reduzir o inchaço, controlar a fome emocional e sair do efeito sanfona — sem culpa, sem extremos e respeitando o corpo feminino.
             </p>
             
             <a
               href={CHECKOUT_URL}
               className="btn-primary-glow inline-block"
             >
-              Quero Emagrecer Sem Culpa
+              Quero emagrecer sem culpa
             </a>
           </div>
           

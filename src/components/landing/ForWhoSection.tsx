@@ -1,20 +1,25 @@
-import { User, RefreshCw, Heart } from "lucide-react";
+import { User, RefreshCw, Heart, Target } from "lucide-react";
 
 const personas = [
   {
     icon: User,
     title: "Mulheres cansadas de dietas",
-    description: "Que já tentaram de tudo e nada funciona"
+    description: "Que já tentaram de tudo e nada parece funcionar de verdade"
   },
   {
     icon: RefreshCw,
     title: "Quem sofre com efeito sanfona",
-    description: "Emagrece, engorda, e se culpa por isso"
+    description: "Emagrece, engorda, e se culpa por isso — num ciclo sem fim"
   },
   {
     icon: Heart,
     title: "Quem quer emagrecer sem se odiar",
-    description: "Buscando um caminho com autocompaixão"
+    description: "Buscando um caminho com autocompaixão e respeito ao próprio corpo"
+  },
+  {
+    icon: Target,
+    title: "Quem busca resultado real",
+    description: "Não quer milagre, quer um método possível de manter"
   }
 ];
 
