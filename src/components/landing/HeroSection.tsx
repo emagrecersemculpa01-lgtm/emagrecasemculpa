@@ -25,7 +25,7 @@ export const HeroSection = () => {
             </p>
             
             <a
-              href={CHECKOUT_URL}
+              href="#preco"
               className="btn-primary-glow inline-block"
             >
               Quero emagrecer sem culpa

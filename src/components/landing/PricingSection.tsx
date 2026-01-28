@@ -4,7 +4,7 @@ const CHECKOUT_URL = "https://pay.cakto.com.br/hvacbfa_744151";
 
 export const PricingSection = () => {
   return (
-    <section className="section-padding relative">
+    <section id="preco" className="section-padding relative">
       <div className="neon-glow-bg w-[600px] h-[600px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
       
       <div className="container-narrow relative z-10">
