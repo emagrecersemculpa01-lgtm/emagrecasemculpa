@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import { ScrollReveal, ScrollRevealStagger, ScrollRevealItem } from "@/components/ui/scroll-reveal";
 
 const testimonials = [
   {
@@ -22,35 +23,36 @@ export const TestimonialsSection = () => {
   return (
     <section className="section-padding relative">
       <div className="container-narrow relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          O que elas <span className="gradient-text">dizem</span>
-        </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          Histórias reais de mulheres que transformaram sua relação com o corpo.
-        </p>
+        <ScrollReveal>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            O que elas <span className="gradient-text">dizem</span>
+          </h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            Histórias reais de mulheres que transformaram sua relação com o corpo.
+          </p>
+        </ScrollReveal>
         
-        <div className="grid md:grid-cols-3 gap-6">
+        <ScrollRevealStagger className="grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="glass-card p-6 relative transition-all duration-300 hover:glow-box"
-            >
-              <Quote className="w-8 h-8 text-primary/30 absolute top-4 right-4" />
-              <p className="text-muted-foreground mb-6 italic leading-relaxed">
-                "{testimonial.text}"
-              </p>
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary font-semibold">{testimonial.name[0]}</span>
-                </div>
-                <div>
-                  <p className="font-medium">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.age} anos</p>
+            <ScrollRevealItem key={index}>
+              <div className="glass-card p-6 relative transition-all duration-300 hover:glow-box h-full">
+                <Quote className="w-8 h-8 text-primary/30 absolute top-4 right-4" />
+                <p className="text-muted-foreground mb-6 italic leading-relaxed">
+                  "{testimonial.text}"
+                </p>
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="text-primary font-semibold">{testimonial.name[0]}</span>
+                  </div>
+                  <div>
+                    <p className="font-medium">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.age} anos</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollRevealItem>
           ))}
-        </div>
+        </ScrollRevealStagger>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { FileText, Utensils, Calendar, Dumbbell, Heart } from "lucide-react";
+import { ScrollReveal, ScrollRevealStagger, ScrollRevealItem } from "@/components/ui/scroll-reveal";
 
 const benefits = [
   {
@@ -34,27 +35,28 @@ export const WhatYouGetSection = () => {
       <div className="neon-glow-bg w-[500px] h-[500px] bottom-0 right-0" />
       
       <div className="container-narrow relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          O que você <span className="gradient-text">recebe</span>
-        </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          Tudo o que você precisa para começar sua transformação hoje.
-        </p>
+        <ScrollReveal>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            O que você <span className="gradient-text">recebe</span>
+          </h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            Tudo o que você precisa para começar sua transformação hoje.
+          </p>
+        </ScrollReveal>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ScrollRevealStagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="glass-card p-6 transition-all duration-300 hover:glow-box hover:-translate-y-1"
-            >
-              <div className="w-12 h-12 mb-4 rounded-xl bg-secondary/50 flex items-center justify-center">
-                <benefit.icon className="w-6 h-6 text-primary" />
+            <ScrollRevealItem key={index}>
+              <div className="glass-card p-6 transition-all duration-300 hover:glow-box hover:-translate-y-1 h-full">
+                <div className="w-12 h-12 mb-4 rounded-xl bg-secondary/50 flex items-center justify-center">
+                  <benefit.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
+                <p className="text-muted-foreground text-sm">{benefit.description}</p>
               </div>
-              <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
-              <p className="text-muted-foreground text-sm">{benefit.description}</p>
-            </div>
+            </ScrollRevealItem>
           ))}
-        </div>
+        </ScrollRevealStagger>
       </div>
     </section>
   );
