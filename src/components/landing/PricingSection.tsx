@@ -1,3 +1,5 @@
+import { ShieldCheck } from "lucide-react";
+
 const CHECKOUT_URL = "https://pay.cakto.com.br/hvacbfa_744151";
 
 export const PricingSection = () => {
@@ -29,13 +31,28 @@ export const PricingSection = () => {
           
           <a 
             href={CHECKOUT_URL} 
-            className="btn-primary-glow inline-block text-xl px-10 py-5 mb-6"
+            className="btn-primary-glow inline-block text-xl px-10 py-5 mb-8"
           >
             Quero começar agora por R$ 37,90
           </a>
           
+          {/* Selo de Garantia */}
+          <div className="max-w-md mx-auto mb-6">
+            <div className="glass-card p-6 border border-primary/30 glow-box">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <ShieldCheck className="w-8 h-8 text-primary" />
+                <h3 className="text-lg font-semibold gradient-text">
+                  Garantia Incondicional de 7 Dias
+                </h3>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                Se você não gostar, devolvemos <strong className="text-foreground">100% do seu dinheiro</strong>. Sem perguntas.
+              </p>
+            </div>
+          </div>
+          
           <p className="text-sm text-muted-foreground">
-            Pagamento seguro • Acesso imediato • Garantia de 7 dias
+            Pagamento seguro • Acesso imediato
           </p>
         </div>
       </div>
