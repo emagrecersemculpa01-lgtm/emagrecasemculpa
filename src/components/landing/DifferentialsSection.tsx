@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { ScrollReveal, ScrollRevealStagger, ScrollRevealItem } from "@/components/ui/scroll-reveal";
 
 const differentials = [
   "Emagrecimento possível de manter — sem terrorismo nutricional",
@@ -11,27 +12,33 @@ export const DifferentialsSection = () => {
   return (
     <section className="section-padding relative">
       <div className="container-narrow relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          O que esse método <span className="gradient-text">faz diferente</span>
-        </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          Um caminho que respeita sua realidade, não um ideal impossível.
-        </p>
+        <ScrollReveal>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            O que esse método <span className="gradient-text">faz diferente</span>
+          </h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            Um caminho que respeita sua realidade, não um ideal impossível.
+          </p>
+        </ScrollReveal>
         
-        <div className="max-w-xl mx-auto">
-          <div className="glass-card p-8 md:p-10">
-            <ul className="space-y-5">
-              {differentials.map((item, index) => (
-                <li key={index} className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Check className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="text-lg">{item}</span>
-                </li>
-              ))}
-            </ul>
+        <ScrollReveal delay={0.1}>
+          <div className="max-w-xl mx-auto">
+            <div className="glass-card p-8 md:p-10">
+              <ScrollRevealStagger className="space-y-5">
+                {differentials.map((item, index) => (
+                  <ScrollRevealItem key={index}>
+                    <li className="flex items-center gap-4 list-none">
+                      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="w-5 h-5 text-primary" />
+                      </div>
+                      <span className="text-lg">{item}</span>
+                    </li>
+                  </ScrollRevealItem>
+                ))}
+              </ScrollRevealStagger>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
