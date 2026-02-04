@@ -1,5 +1,6 @@
 import { ShieldCheck } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { UrgencyBadge } from "@/components/landing/UrgencyBanner";
 
 const CHECKOUT_URL = "https://pay.cakto.com.br/hvacbfa_744151";
 
@@ -11,6 +12,8 @@ export const PricingSection = () => {
       <div className="container-narrow relative z-10">
         <ScrollReveal>
           <div className="glass-card p-8 md:p-12 text-center glow-box">
+            <UrgencyBadge />
+            
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Comece hoje por um <span className="gradient-text">valor acessível</span>
             </h2>
