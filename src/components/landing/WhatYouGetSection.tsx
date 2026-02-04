@@ -1,11 +1,12 @@
-import { FileText, Utensils, Calendar, Dumbbell, Heart } from "lucide-react";
+import { FileText, Utensils, Calendar, Dumbbell, Heart, Star } from "lucide-react";
 import { ScrollReveal, ScrollRevealStagger, ScrollRevealItem } from "@/components/ui/scroll-reveal";
 
 const benefits = [
   {
     icon: FileText,
     title: "Guia completo em PDF",
-    description: "Passo a passo estruturado e fácil de aplicar na sua vida real"
+    description: "Passo a passo estruturado e fácil de aplicar na sua vida real",
+    premium: true
   },
   {
     icon: Utensils,
@@ -15,7 +16,8 @@ const benefits = [
   {
     icon: Calendar,
     title: "Ajustes para o ciclo hormonal",
-    description: "Cada fase do mês trabalhando a seu favor, não contra você"
+    description: "Cada fase do mês trabalhando a seu favor, não contra você",
+    premium: true
   },
   {
     icon: Dumbbell,
@@ -36,20 +38,33 @@ export const WhatYouGetSection = () => {
       
       <div className="container-narrow relative z-10">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            O que você <span className="gradient-text">recebe</span>
-          </h2>
-          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Tudo o que você precisa para começar sua transformação hoje.
-          </p>
+          <div className="text-center mb-12">
+            <span className="premium-badge mb-4">
+              <Star className="w-3 h-3" />
+              Conteúdo Exclusivo
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              O que você <span className="gradient-text">recebe</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Tudo o que você precisa para começar sua transformação hoje.
+            </p>
+          </div>
         </ScrollReveal>
         
         <ScrollRevealStagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (
             <ScrollRevealItem key={index}>
-              <div className="glass-card p-6 transition-all duration-300 hover:glow-box hover:-translate-y-1 h-full">
-                <div className="w-12 h-12 mb-4 rounded-xl bg-secondary/50 flex items-center justify-center">
-                  <benefit.icon className="w-6 h-6 text-primary" />
+              <div className={`${benefit.premium ? 'glass-card-premium' : 'glass-card'} p-6 transition-all duration-300 hover:glow-box hover:-translate-y-1 h-full group`}>
+                {benefit.premium && (
+                  <div className="absolute top-3 right-3">
+                    <span className="text-[10px] uppercase tracking-wider text-primary font-bold bg-primary/20 px-2 py-1 rounded-full">
+                      Premium
+                    </span>
+                  </div>
+                )}
+                <div className={`w-12 h-12 mb-4 rounded-xl flex items-center justify-center ${benefit.premium ? 'bg-primary/30' : 'bg-secondary/50'}`}>
+                  <benefit.icon className={`w-6 h-6 text-primary ${benefit.premium ? 'icon-glow' : ''}`} />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
                 <p className="text-muted-foreground text-sm">{benefit.description}</p>
