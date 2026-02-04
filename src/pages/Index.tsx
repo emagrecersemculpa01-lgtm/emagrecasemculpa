@@ -9,10 +9,12 @@ import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { PricingSection } from "@/components/landing/PricingSection";
 import { FAQSection } from "@/components/landing/FAQSection";
 import { Footer } from "@/components/landing/Footer";
+import { UrgencyBanner } from "@/components/landing/UrgencyBanner";
 
 const Index = () => {
   return (
-    <main className="min-h-screen overflow-x-hidden">
+    <main className="min-h-screen overflow-x-hidden pt-10">
+      <UrgencyBanner />
       <HeroSection />
       <ProblemSection />
       <DifferentialsSection />
