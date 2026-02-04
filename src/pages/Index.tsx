@@ -3,6 +3,7 @@ import { ProblemSection } from "@/components/landing/ProblemSection";
 import { DifferentialsSection } from "@/components/landing/DifferentialsSection";
 import { BenefitsSection } from "@/components/landing/BenefitsSection";
 import { WhatYouGetSection } from "@/components/landing/WhatYouGetSection";
+import { BonusSection } from "@/components/landing/BonusSection";
 import { ForWhoSection } from "@/components/landing/ForWhoSection";
 import { CTASection } from "@/components/landing/CTASection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
@@ -20,6 +21,7 @@ const Index = () => {
       <DifferentialsSection />
       <BenefitsSection />
       <WhatYouGetSection />
+      <BonusSection />
       <ForWhoSection />
       <CTASection variant="intermediate" />
       <TestimonialsSection />
