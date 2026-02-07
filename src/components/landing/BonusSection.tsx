@@ -1,4 +1,4 @@
-import { Gift, BookOpen, ListChecks, Clock, Crown } from "lucide-react";
+import { Gift, BookOpen, ListChecks, Clock, Crown, Moon, Heart } from "lucide-react";
 import { ScrollReveal, ScrollRevealStagger, ScrollRevealItem } from "@/components/ui/scroll-reveal";
 
 const bonuses = [
@@ -19,6 +19,18 @@ const bonuses = [
     title: "Guia de Desbloqueio Emocional",
     description: "Técnicas para identificar e superar a fome emocional de vez",
     value: "R$ 37"
+  },
+  {
+    icon: Moon,
+    title: "Protocolo do Sono Reparador",
+    description: "Rotina noturna que acelera o metabolismo e reduz o cortisol enquanto você dorme",
+    value: "R$ 29"
+  },
+  {
+    icon: Heart,
+    title: "Diário de Autocompaixão",
+    description: "30 dias de exercícios para transformar sua relação com o corpo e a comida",
+    value: "R$ 19"
   }
 ];
 
@@ -35,8 +47,8 @@ export const BonusSection = () => {
               Bônus Exclusivos
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="gradient-text">+R$ 81</span> em bônus incluídos
-            </h2>
+            <span className="gradient-text">+R$ 129</span> em bônus incluídos
+          </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Você recebe tudo isso junto com o método principal, sem pagar nada a mais.
             </p>
@@ -80,7 +92,7 @@ export const BonusSection = () => {
             <div className="inline-flex items-center gap-3 glass-card px-6 py-3">
               <Crown className="w-5 h-5 text-accent icon-glow" />
               <span className="text-lg font-semibold">
-                Total em bônus: <span className="gradient-text">R$ 81,00</span> — você paga <span className="text-accent">R$ 0</span>
+                Total em bônus: <span className="gradient-text">R$ 129,00</span> — você paga <span className="text-accent">R$ 0</span>
               </span>
             </div>
           </div>
